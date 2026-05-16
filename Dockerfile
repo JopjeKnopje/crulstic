@@ -5,9 +5,11 @@ FROM curlimages/curl
 COPY --from=RESTIC /usr/bin/restic /usr/bin/restic
 COPY --from=RESTIC /usr/bin/ssh /usr/bin/ssh
 
-# RUN useradd -ms /bin/bash worker
-# USER worker
+USER root
+RUN adduser -S worker
 
-WORKDIR /worker
+USER worker
+WORKDIR /home/worker
+
 
 ENTRYPOINT ["restic"]

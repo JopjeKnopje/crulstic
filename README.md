@@ -9,8 +9,6 @@ just build
 ```
 
 Run
-
 ```bash
 just run <container-ARGS>
 ```
-

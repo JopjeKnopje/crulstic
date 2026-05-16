@@ -5,4 +5,6 @@ FROM curlimages/curl
 COPY --from=RESTIC /usr/bin/restic /usr/bin/restic
 
 
+WORKDIR /worker
+
 ENTRYPOINT ["restic"]

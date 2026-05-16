@@ -12,3 +12,8 @@ Run
 ```bash
 just run <container-ARGS>
 ```
+
+Get shell
+```bash
+just shell
+```

@@ -1,5 +1,5 @@
-# Crulstic
-Simple container which combines [cURL](https://curl.se/docs/manpage.html) and [restic](https://restic.net/), I use it to do post-restic health checks.
+# crulstic
+[cURL](https://curl.se/docs/manpage.html) and [restic](https://restic.net/) in a single container. Handy for running [`healthchecks.io`](https://healthchecks.io/) requests when doing restic backups.
 
 
 ## Local build

@@ -1,0 +1,19 @@
+exclude: '^klusrc/'
+repos:
+  - repo: builtin
+    hooks:
+      - id: check-added-large-files
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+  - repo: https://github.com/reteps/dockerfmt
+    rev: v0.5.2
+    hooks:
+      - id: dockerfmt
+  - repo: https://github.com/google/yamlfmt
+    rev: v0.21.0
+    hooks:
+      - id: yamlfmt
+        # don't reformat install.yaml files that we've gotten from external sources
+        exclude: "install.yaml$"

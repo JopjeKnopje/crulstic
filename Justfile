@@ -1,8 +1,8 @@
 build:
 	docker build -t crulstic .
 
-run *args: build 
+run *args: build
 	docker run -it crulstic:latest {{args}}
 
-shell: build 
+shell: build
 	docker run -it --entrypoint /bin/sh crulstic:latest
